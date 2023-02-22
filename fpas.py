@@ -1,0 +1,23 @@
+from tkinter import*
+a=Tk()
+a.title('Forgot Password')
+a.maxsize(1000,800)
+a.minsize(1000,800)
+img1=PhotoImage(file='siotr.png')
+image=Label(a,image=img1,bg="skyblue").place(x=0,y=60)
+a.config(bg="skyblue")
+frame1=Frame(height=2000,width=1000,bg='sky blue').place(x=360,y=0)
+label1=Label(a,text='PLEASE FILL UP \n ALL THE QUESTION MENTIONED BELOW: ',bg='sky blue',font=('Calisto MT Bold',18),fg='black').place(x=450,y=80)
+email=Label(a,text='Confirm your email*',bg='sky blue',font=('Calisto MT Bold',12),fg="red").place(x=500,y=165)
+entry1=Entry(a,borderwidth=3,fg='Black',width=50).place(x=500,y=200)
+phone=Label(a,text='Phone Number*',bg='sky blue',font=('Calisto MT Bold',12),fg='red').place(x=500,y=240)
+entry2=Entry(a,borderwidth=3,fg='Black',width=50).place(x=500,y=280)
+password=Label(a,text='New Password*',bg='sky blue',font=('Calisto MT Bold',12),fg='red').place(x=500,y=320)
+entry3=Entry(a,borderwidth=3,fg='Black',width=50).place(x=500,y=355)
+confirm_pas=Label(a,text='Confirm Password*',bg='skyblue',fg='red',font=('Calisto MT Bold',12)).place(x=500,y=395)
+entry4=Entry(a,borderwidth=3,fg='Black',width=50).place(x=500,y=430)
+def confirm():
+    a.destroy()
+    import Login
+button1=Button(a,text='Confirm',bg='skyblue',font=('Calisto MT Bold',14),padx=20,pady=2,fg='red',command=confirm).place(x=530,y=530)
+a.mainloop()
